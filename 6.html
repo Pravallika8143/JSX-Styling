@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- <style>
+         .abc{
+            border: 1px solid;
+            padding:10px;
+            justify-content: space-evenly;
+            background: pink;
+            flex-wrap: wrap;
+         }
+    </style> -->
+</head>
+<body>
+    <div id="d1"></div>
+    <script type="text/babel">
+        var obj=[
+            {
+               'FirstName':'Praveen',
+               'LastName':'Gubbala',
+               'Age':40,
+               'Gender':'Male'
+            },
+            {
+               'FirstName':'Smrithi',
+               'LastName':'Mandana',
+               'Age':25,
+               'Gender':'Female'
+            },
+            {
+               'FirstName':'Mithili',
+               'LastName':'Raj',
+               'Age':39,
+               'Gender':'Female'
+            },
+            {
+               'FirstName':'Rohit',
+               'LastName':'Sharma',
+               'Age':35,
+               'Gender':'Male'
+            },
+            {
+               'FirstName':'Sachin',
+               'LastName':'Tendulkar',
+               'Age':50,
+               'Gender':'Male'
+            },
+        ]
+        // var jsxh1=<div className='abc'>
+        //     <h1>FirstName:{obj[0].FirstName}</h1>
+        //     <h1>LastName:{obj[0].LastName}</h1>
+        //     <h1>Age:{obj[0].Age}</h1>
+        //     <h1>Gender:{obj[0].Gender}</h1>
+        //     </div>
+         var jsxh1=<div style={{display:"flex",flexWrap:"wrap"}}>
+
+            {
+                obj.map(function(obj){
+                    return (
+                      <div style={{border:'1px solid',width:'300px',padding:'20px',margin:'30px'}}>
+                        <div style={(obj.Gender==='Male')?{backgroundColor:"lightblue"}:{backgroundColor:'pink'}}>
+                        <h1>FirstName:{obj.FirstName}</h1>
+                        <h1>LastName:{obj.LastName}</h1>
+                        <h1>Age:{obj.Age}</h1>
+                        <h1>Gender:{obj.Gender}</h1>
+                        </div>
+                      </div>
+                    )
+                })
+            }
+            </div>
+            ReactDOM.render(jsxh1,document.getElementById("d1"));
+    </script> 
+</body>
+</html>

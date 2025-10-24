@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+         .abc{
+            display: flex;
+            padding:10px;
+            justify-content: space-evenly;
+         }
+         #d2{
+            border: 1px solid;
+            width: 65px;
+            padding: 10px;
+         }
+         #d3{
+            border: 1px solid;
+            width: 30px;
+            padding: 10px;
+         }
+         #d4{
+            border: 1px solid;
+            width: 30px;
+            padding: 10px;
+            
+         }
+         #d5{
+            border: 1px solid;
+            width: 60px;
+            padding: 10px;
+         }
+         #d6{
+            border: 1px solid;
+            width: 50px;
+            padding: 10px;
+        
+         }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <script type="text/babel">
+        var ar=['pravallika','rajii','uma','mounika','radhika']
+        var jsxh1=<div className="abc">
+            <div id="d2">{ar[0]}</div>
+            <div id="d3">{ar[1]}</div>
+            <div id="d4">{ar[2]}</div>
+            <div id="d5">{ar[3]}</div>
+            <div id="d6">{ar[4]}</div>
+        </div>
+        ReactDOM.render(jsxh1,document.getElementById("d1"));
+        
+    </script> 
+</body>
+</html>

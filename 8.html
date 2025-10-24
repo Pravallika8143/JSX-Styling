@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+         .abc{
+            margin-left: 200px;
+            margin-top: 0px;
+         }
+    </style> 
+</head>
+<body>
+    <div id="d1"></div>
+    <script type="text/babel">
+        var obj=[
+            {
+               'FirstName':'Praveen',
+               'LastName':'Gubbala',
+               'Age':40,
+               'Gender':'Male'
+            },
+            {
+               'FirstName':'Smrithi',
+               'LastName':'Mandana',
+               'Age':25,
+               'Gender':'Female'
+            },
+            {
+               'FirstName':'Mithili',
+               'LastName':'Raj',
+               'Age':39,
+               'Gender':'Female'
+            },
+            {
+               'FirstName':'Rohit',
+               'LastName':'Sharma',
+               'Age':35,
+               'Gender':'Male'
+            },
+            {
+               'FirstName':'Sachin',
+               'LastName':'Tendulkar',
+               'Age':50,
+               'Gender':'Male'
+            },
+        ]
+        var jsxh1=<table border="2px solid">
+            {
+                obj.map((obj)=>{
+                    return (
+                      <tr>
+                        <td>{obj.FirstName}</td>
+                        <td>{obj.LastName}</td>
+                        <td>{obj.Age}</td>
+                        <td>{obj.Gender}</td>
+                      </tr>
+                    )
+                })
+            }
+            </table>
+        ReactDOM.render(jsxh1,document.getElementById("d1"));
+    </script> 
+</body>
+</html>
